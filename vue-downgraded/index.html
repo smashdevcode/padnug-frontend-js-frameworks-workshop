@@ -1,0 +1,30 @@
+<html>
+
+<head></head>
+
+<body>
+  <div id="app">
+    <h2 v-text="appName" v-once></h2>
+    <img v-bind:src="photoUrl" v-bind:alt="altText" />
+    <button v-on:click="handleClick()" v-on:hover="handleHover()">Click me!</button>
+  </div>
+
+  <script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+  <script>
+    const app = new Vue({
+      el: '#app',
+      data: {
+        appName: 'Our Awesome App!',
+        photoUrl: '',
+        altText: ''
+      },
+      methods: {
+        handleClick() {
+          alert('Clicked!');          
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
